@@ -1,0 +1,30 @@
+######创建本地服务器，修改后自动刷新页面######
+------------------------------------------------------------------------
+
+1.创建package.json文件
+               npm init -y
+
+2.安装工具
+               npm i browser-sync -D
+
+3.在package.json的“scripts”中添加
+               "start": "./node_modules/.bin/browser-sync start --server --no-notify --files='index.html, *.css, *.js'"
+
+4.在命令行输入npm start
+
+
+######创建项目仓库######
+------------------------------------------------------------------------
+
+★★★为什么使用 .gitignore ？
+在一些项目中，我们不想让本地仓库的所有文件都上传到远程仓库中，而是有选择的上传，比如：一些依赖文件（node_modules下的依赖）、bin 目录下的文件、测试文件等。一方面将一些依赖、测试文件都上传到远程传输量很大，另一方面，一些文件对于你这边是可用的，在另一个人那可能就不可用了，比如：本地配置文件。
+
+为了解决上述问题，git 引入了 .gitignore 文件，使用该文件来选择性的上传文件。
+
+https://github.com/github/gitignore/blob/main/Node.gitignore
+
+复制->本地创建 .gitignore文件，粘贴
+然后在命令行创建本地仓库
+                                    git init
+
+★★★在命令行输入 start可以新建一个命令行窗口
